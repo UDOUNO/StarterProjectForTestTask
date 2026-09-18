@@ -8,6 +8,13 @@ public class CoreProjectInstaller : MonoInstaller
     public override void InstallBindings()
     {
         Container.Bind<EventManager>().AsSingle();
-        Container.Bind<UIController>().FromInstance(_uiController).AsSingle();
+
+        Container.Bind<UIController>()
+            .FromInstance(_uiController)
+            .AsSingle();
+
+        Container.Bind<SceneLoader>()
+            .AsSingle()
+            .NonLazy();
     }
 }

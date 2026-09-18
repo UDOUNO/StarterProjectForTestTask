@@ -9,4 +9,8 @@ public static class EventsProvider
             ScreenId = screenId;
         }
     }
+
+    public class PlayerFellEvent
+    {
+    }
 }
